@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: palevioletred;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: pink;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .info-container {
+            display: none;
+            width: 60%;
+            margin: 20px;
+            padding: 20px;
+            background-color: pink;
+            border-radius: 8px;
+            position: absolute;
+            top: 170px; /* Ajuste este valor conforme necessário para colocar abaixo da imagem */
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .image-container:hover .info-container {
+            display: block;
+            opacity: 1;
+        }
+
+        footer {
+            background-color: palevioletred;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistemas Operativos.</h1>
+    </header>
+
+    <nav>
+        <a href="#">Seção 1</a>
+        <a href="#">Seção 2</a>
+        <a href="#">Seção 3</a>
+    </nav>
+
+    <div class="image-container">
+        <img src="https://i.pinimg.com/564x/61/13/4e/61134eed775e7922d23ff7e4a8c21d06.jpg" alt="Imagem 1">
+        <img src="imagem2.jpg" alt="Imagem 2">
+        <img src="imagem3.jpg" alt="Imagem 3">
+        <div class="info-container">
+            <h2> Arquitetura de Sistemas Operacionais:</h2>
+            <p>Os sistemas operacionais adotam diferentes arquiteturas, como monolítica, em camadas e microkernel. A escolha da arquitetura influencia diretamente no desempenho e na flexibilidade do sistema.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Meu Website. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

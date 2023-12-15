@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Website</title>
-    <style>
-        body {
+    <title>Efeito de Revelação</title>
+    <style> 
+         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
             color: #333;
             line-height: 1.6;
+            background: url('https://i1.wp.com/i.pinimg.com/originals/61/8f/08/618f083c61a7460ce0a6064319af41bd.gif') no-repeat center center fixed;
+            background-size: cover;
         }
-
         header {
-            background-color: palevioletred;
+            background-color: rgb(0, 0, 0);
             color: #fff;
             padding: 1em 0;
             text-align: center;
         }
-
+        
         nav {
             background-color: pink;
             color: #fff;
@@ -33,6 +33,36 @@
             text-decoration: none;
             color: #fff;
             margin: 0 15px;
+        }
+
+        .imagem {
+            position: relative;
+            display: inline-block;
+        }
+
+        .informacao {
+            position: absolute;
+            display: none;
+            z-index: 1;
+            transition: opacity 1s;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .invisivel {
+            display: none;
+        }
+
+        footer {
+            background-color: rgb(0, 0, 0);
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         .image-container {
@@ -63,25 +93,12 @@
             background-color: pink;
             border-radius: 8px;
             position: absolute;
-            top: 170px; /* Ajuste este valor conforme necessário para colocar abaixo da imagem */
+            top: 170px;
             left: 0;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
         }
 
         .image-container:hover .info-container {
             display: block;
-            opacity: 1;
-        }
-
-        footer {
-            background-color: palevioletred;
-            color: #fff;
-            padding: 1em 0;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
     </style>
 </head>
@@ -89,29 +106,74 @@
 <body>
 
     <header>
-        <h1>Sistemas Operativos.</h1>
+        <h1>Sistemas Operativos</h1>
     </header>
-
-    <nav>
-        <a href="#">Seção 1</a>
-        <a href="#">Seção 2</a>
-        <a href="#">Seção 3</a>
-    </nav>
+    
 
     <div class="image-container">
-        <img src="https://i.pinimg.com/564x/61/13/4e/61134eed775e7922d23ff7e4a8c21d06.jpg" alt="Imagem 1">
-        <img src="imagem2.jpg" alt="Imagem 2">
-        <img src="imagem3.jpg" alt="Imagem 3">
-        <div class="info-container">
-            <h2> Arquitetura de Sistemas Operacionais:</h2>
-            <p>Os sistemas operacionais adotam diferentes arquiteturas, como monolítica, em camadas e microkernel. A escolha da arquitetura influencia diretamente no desempenho e na flexibilidade do sistema.</p>
+        <div class="imagem" onmouseover="showInfo(this)" onmouseout="hideAllInfo()">
+            <img src="https://th.bing.com/th/id/OIP.s6Nc3hK98loPXP_D5GVxlwHaD4?rs=1&pid=ImgDetMain" alt="Imagem 1">
+            <div class="informacao">
+                <h2>Exigências de Hardware:</h2>
+                <p>Compreenda as especificações mínimas do hardware para garantir um desempenho estável do sistema operativo.
+                </p>
+            </div>
+        </div>
+
+        <div class="imagem" onmouseover="showInfo(this)" onmouseout="hideAllInfo()">
+            <img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2018/7/15/25124286/25124286_041cf824-1f80-43d7-98a0-40fc69be9b65_504_360.jpg" alt="Imagem 2">
+            <div class="informacao">
+                <h2>Métodos de Instalação:</h2>
+                <p>Escolha entre CDs, DVDs, USBs ou rede para instalar o sistema operativo, seguindo cuidadosamente as instruções fornecidas.
+                </p>
+            </div>
+        </div>
+
+        <div class="imagem" onmouseover="showInfo(this)" onmouseout="hideAllInfo()">
+            <img src="https://cdn.sanity.io/images/z6yqajzt/production/faca7d7ffe91c78637fe9389defb6d840218815c-2662x1322.jpg" alt="Imagem 3">
+            <div class="informacao">
+                <h2>Configurações durante a Instalação:</h2>
+                <p>Faça escolhas importantes, como idioma, layout de teclado e configurações de partição, alinhadas com as preferências individuais.</p>
+            </div>
+        </div>
+
+        <div class="imagem" onmouseover="showInfo(this)" onmouseout="hideAllInfo()">
+            <img src="https://th.bing.com/th/id/OIP.L_Fg5Av3UsSYII_IEsgCcQAAAA?rs=1&pid=ImgDetMain" alt="Imagem 4">
+            <div class="informacao">
+                <h2>Configuração Pós-Instalação:</h2>
+                <p>Configure periféricos, como impressoras e dispositivos de armazenamento, após a instalação, assegurando a instalação de drivers necessários.</p>
+            </div>
+        </div>
+
+        <div class="imagem" onmouseover="showInfo(this)" onmouseout="hideAllInfo()">
+            <img src="https://th.bing.com/th/id/R.bd004879aa72aa16eee3a4b909d474ab?rik=YC4hNpXrYNDJ5Q&riu=http%3a%2f%2fwww.bluebridgenetworks.com%2fwp-content%2fuploads%2f2020%2f05%2fcybersecurity-risk-vulnerable-companies-1080x675.jpg&ehk=vesCs5NvZB4hycLU%2fCBOoxjEfyIIAlKuYG7qwJSAWk0%3d&risl=&pid=ImgRaw&r=0" alt="Imagem 5">
+            <div class="informacao">
+                <h2>Segurança e Personalização:</h2>
+                <p>Estabeleça práticas seguras, como senhas robustas e autenticação de dois fatores, além de personalizar o sistema operativo para atender às preferências individuais dos utilizadores.</p>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2023 Meu Website. Todos os direitos reservados.</p>
+        <p>&copy; 2023 Sistemas Operativos. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function showInfo(element) {
+            // Exibe a informação da imagem
+            $(element).find(".informacao").show();
+
+            // Oculta as outras imagens
+            $(element).siblings('.imagem').find('img').addClass('invisivel');
+        }
+
+        function hideAllInfo() {
+            // Oculta todas as informações e exibe todas as imagens
+            $('.informacao').hide();
+            $('.invisivel').removeClass('invisivel');
+        }
+    </script>
 </body>
 
 </html>

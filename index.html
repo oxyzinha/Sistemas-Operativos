@@ -18,7 +18,7 @@
         header {
             background-color: rgb(0, 0, 0);
             color: #fff;
-            padding: 1em 0;
+            padding: 0.5em 0; /* Ajuste do padding para diminuir a altura do header */
             text-align: center;
         }
         
@@ -27,6 +27,11 @@
             color: #fff;
             text-align: center;
             padding: 1em 0;
+        }
+
+        h1 {
+            font-size: 1.5em; /* Ajuste do tamanho da fonte do h1 */
+            margin: 0; /* Remoção da margem padrão do h1 para evitar espaçamento extra */
         }
 
         nav a {
@@ -43,7 +48,7 @@
         .informacao {
             position: absolute;
             display: none;
-            z-index: 1;
+            z-index: 0;
             transition: opacity 1s;
             background-color: rgba(255, 255, 255, 0.8);
             padding: 10px;
@@ -58,11 +63,12 @@
         footer {
             background-color: rgb(0, 0, 0);
             color: #fff;
-            padding: 1em 0;
+            padding: 0.1em 0;
             text-align: center;
             position: fixed;
             bottom: 0;
             width: 100%;
+            z-index: 1;
         }
 
         .image-container {
@@ -71,6 +77,7 @@
             align-items: center;
             flex-wrap: wrap;
             position: relative;
+            z-index: 0;
         }
 
         .image-container img {
@@ -93,7 +100,7 @@
             background-color: pink;
             border-radius: 8px;
             position: absolute;
-            top: 170px;
+            top: 200px;
             left: 0;
         }
 
@@ -109,6 +116,14 @@
         <h1>Sistemas Operativos</h1>
     </header>
     
+    <header>
+        <nav>
+            Referências:
+            <a href="https://chat.openai.com/c/b6e239c0-fde2-4fef-a9ae-c29719d69119">Conversas do Chat GPT</a>
+            <a href="https://chat.openai.com/c/1955efbe-ee9b-4546-ba1d-fc59c745c0e0">Conversas do Chat GPT</a>
+            <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/779">Catálogo</a>
+        </nav>
+    </header>
 
     <div class="image-container">
         <div class="imagem" onmouseover="showInfo(this)" onmouseout="hideAllInfo()">
